@@ -12,7 +12,7 @@ function onBodyLoad(){
 
 	//Create strings of divs to write later
 	divStr = '<div style="width: ' + widthOfSquares + '; height: '+ widthOfSquares + ';"></div>'
-	inlineDiv = '<div style="display: inline-block; width: ' + widthOfSquares + '; height: '+ widthOfSquares + ';"></div>'
+	inlineDiv = '<div id="pixel" style="display: inline-block; width: ' + widthOfSquares + '; height: '+ widthOfSquares + ';"></div>'
 
 	//Write one row at a time.  Need as many rows as we have numOfSquares
 	for (j=0; j < numOfSquares; j++ )
@@ -27,4 +27,19 @@ function onBodyLoad(){
 	}
 	sceneDiv.innerHTML = htmlStr;
 }
+
+//Jquery begins here
+$(document).ready(function(){
+	//When I mouse over a div with the ID of pixel
+
+	 $("#pixel").click(function(){
+        $(this).hide();
+	// $("#pixel").mouseover(function()
+	// {
+	// 	 $(this).hide();
+	// });
+
+	});
+}); 
+
 

@@ -4,3 +4,11 @@
 	margin: 0 auto;
 	background-color: gray;
 }
+
+#pixel{
+	background-color: blue;
+}
+
+.color{
+	background-color: red;
+}
