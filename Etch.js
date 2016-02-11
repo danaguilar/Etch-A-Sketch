@@ -1,7 +1,7 @@
 //Run when the body loads
-function onBodyLoad(){
+var numOfSquares = 16;
+function loadGrid(){
 	//initialize the variables
-	var numOfSquares = 16;
 	var sceneDiv = document.getElementById("scene");
 	var htmlStr = '';
 	var divStr = '';
@@ -11,9 +11,8 @@ function onBodyLoad(){
 	var widthOfSquares = sceneDiv.clientWidth/numOfSquares
 
 	//Create strings of divs to write later
-	divStr = '<div style="width: ' + widthOfSquares + '; height: '+ widthOfSquares + ';"></div>'
-	inlineDiv = '<div id="pixel" style="display: inline-block; width: ' + widthOfSquares + '; height: '+ widthOfSquares + ';"></div>'
-
+	divStr = '<div style="width: ' + widthOfSquares + '; height: '+ widthOfSquares + ';"></div>';
+	inlineDiv = '<div id="pixel" style="display: inline-block; width: ' + widthOfSquares + '; height: '+ widthOfSquares + ';"></div>';
 	//Write one row at a time.  Need as many rows as we have numOfSquares
 	for (j=0; j < numOfSquares; j++ )
 	{
@@ -30,15 +29,12 @@ function onBodyLoad(){
 
 //Jquery begins here
 $(document).ready(function(){
-	//When I mouse over a div with the ID of pixel
+	//Load the grid
+	loadGrid();
 
-	 $("#pixel").click(function(){
-        $(this).hide();
-	// $("#pixel").mouseover(function()
-	// {
-	// 	 $(this).hide();
-	// });
-
+	//When I mouse over a div with the ID of pixel.  Make sure to do the nested selection
+	$("#scene > #pixel").hover(function(){	
+        $(this).css("background-color", "black");
 	});
 }); 
 
