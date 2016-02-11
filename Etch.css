@@ -2,11 +2,34 @@
 	height: 960px;
 	width: 960px;
 	margin: 0 auto;
+	-webkit-box-shadow: 11px 13px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 11px 13px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 11px 13px 5px 0px rgba(0,0,0,0.75);
+
 }
 
-#pixel{
+#controls{
+	height: 200px;
+	width: 960px;
+	margin: 0 auto;
+
+}
+#reset{
+	text-align: left;
 }
 
+#newGrid{
+	position: bottom;
+	float: right;
+	bottom: 0px;
+}
+.odd{
+	background-color: gray;
+}
+
+.even{
+	background-color: gray;
+}
 .color{
 	background-color: red;
 }
